@@ -1,0 +1,206 @@
+.movieList li {
+    width: 18%;
+    display: inline-block;
+    margin: 20px 1% 0;
+    position: relative;
+    height: 300px;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.movieList li .votePoint {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #ff0d0d;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 37px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 199;
+    border: 2px solid #fff;
+}
+
+.movieList li img {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieList li .mTitle {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(0,0,0, .6);
+    text-align: center;
+    color: #fff;
+}
+
+.movies .ant-pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.movies .ant-pagination li {
+    display: inline-block;
+    float: none;
+}
+
+.movieList li .top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    z-index: 299;
+    cursor: pointer;
+}
+
+.movieList li .top .tooltip {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    display: none;
+    width: 170px;
+    padding: 10px;
+    text-align: center;
+}
+
+.movieList li .top:hover .tooltip {
+    display: block;
+}
+
+.movieList li .top svg {
+    display: block;
+    fill: #fff;
+    float: left;
+}
+
+.movieList li .loadingWrapper {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.movieList li .loadingWrapper img {
+    width: 100px;
+    height: auto;
+    float: none;
+    display: inline-block;
+    position: relative;
+    margin-top: 70px;
+}
+
+.movieList li .overlay {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -500px;
+    background: rgba(255,255,255, .8);
+    padding: 10px;
+    transition: all .3s;
+}
+
+.movieList li:hover .overlay {
+    transition: all .3s;
+    bottom: 0;
+}
+
+.movieList li .overlay a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 0;
+    border-top: 1px solid #000;
+}
+
+.movieList li .overlay a:first-child {
+    border-top: 0;
+}
+
+.movieDetails {
+    width: 100%;
+    display: flex;
+}
+
+.movieDetails img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.movieDetails .textWrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.movieDetails .textWrapper h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.movieDetails .textWrapper p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.movieDetails .textWrapper .subInfo span {
+    display: block;
+    clear: both;
+}
+
+@media only screen and (max-width: 1200px) {
+    .movieList li {
+        height: 230px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .movieList li {
+        width: 31%;
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .movieList li {
+        width: 100%;
+        height: 260px;
+        margin: 20px 0 0;
+    }
+
+    .movies .ant-pagination li {
+        margin-right: 5px;
+    }
+
+    .movieDetails {
+        display: block;
+    }
+
+    .movieDetails img {
+        width: 200px;
+        margin: auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .movieList li {
+        height: 200px;
+    }
+}
